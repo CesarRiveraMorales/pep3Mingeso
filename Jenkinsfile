@@ -8,14 +8,14 @@ pipeline {
   stages {
     stage('Install packages') {
       steps {
-        sh 'cd ./mingeso; npm -g install'
-        sh 'cd ./mingeso; npm install -g @vue/cli'
+        sh 'npm -g install'
+        sh 'npm install -g @vue/cli'
       }
     }
 
     stage('Test') {
       steps {
-        sh 'cd ./mingeso; npm run test -- --coverage --watchAll=false'
+        sh 'npm run test -- --coverage --watchAll=false'
       }
     }
 
