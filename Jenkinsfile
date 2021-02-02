@@ -13,11 +13,12 @@ pipeline {
       }
     }
 
-    stage('Linter') {
+    stage('Test') {
       steps {
-        sh 'cd ./mingeso; npm run lint'
+        sh 'cd ./mingeso; npm run test -- --coverage --watchAll=false'
       }
     }
+
     stage('Build/Deploy'){
       steps {
         sh 'cd ./mingeso; npm run build'
