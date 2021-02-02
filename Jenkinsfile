@@ -9,7 +9,7 @@ pipeline {
     stage('Install packages') {
       steps {
         sh 'npm install'
-        sh 'npm install -g http-server'
+        sh 'npm install http-server'
       }
     }
 
