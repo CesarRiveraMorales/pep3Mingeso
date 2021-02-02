@@ -25,14 +25,14 @@ pipeline {
       }
     }
 
-    stage('Build/Deploy'){
+    stage('Build'){
       steps {
-        sh 'set +x'
         sh 'npm run build'
-        sh 'npm run serve'
-        input message: '¿Ha terminado de usar la pagina? (Click en "Proceed" para continuar)'
-        sh 'kill -a'
-        sh 'set -x'
+      }
+    }
+    stage('Deploy'){
+      steps {
+        sh 'echo (Acá debería ir el despliegue de la WebApp en un cluster de kubernetes)'
       }
     }
   }
