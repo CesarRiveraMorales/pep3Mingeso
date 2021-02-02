@@ -21,7 +21,7 @@ pipeline {
 
     stage('Build/Deploy'){
       steps {
-        sh 'cd ./mingeso; npm run build'
+        sh 'npm run build'
       }
     }
   }
