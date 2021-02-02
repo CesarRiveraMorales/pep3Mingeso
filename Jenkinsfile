@@ -27,10 +27,12 @@ pipeline {
 
     stage('Build/Deploy'){
       steps {
+        +x
         sh 'npm run build'
         sh 'npm run serve'
-        input message: '¿Ha terminado de usar la página? (Click en "Proceed" para continuar)'
+        input message: '¿Ha terminado de usar la pagina? (Click en "Proceed" para continuar)'
         sh 'kill -a'
+        -x
       }
     }
   }
