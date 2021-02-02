@@ -16,7 +16,7 @@
 
       <v-divider></v-divider>
 
-      <v-card-text>Esto debería ocurrir de forma automatica en un cluster</v-card-text>
+      <v-card-text> Esta webapp se deberia desplegar automaticamente en un cluster de kubernetes </v-card-text>
 
     </v-card>
 </v-app>
