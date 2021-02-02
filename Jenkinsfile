@@ -26,8 +26,7 @@ pipeline {
 
     stage('Build/Deploy'){
       steps {
-        sh 'docker build -t paginaVue'
-        sh 'docker run -it -p 3454:3454 pagina paginaVue'
+        sh 'npm run build'
       }
     }
   }
