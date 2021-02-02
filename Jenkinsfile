@@ -32,7 +32,7 @@ pipeline {
     }
     stage('Deploy'){
       steps {
-        sh 'echo (Acá debería ir el despliegue de la WebApp en un cluster de kubernetes)'
+        sh 'echo Aca deberia ir el despliegue de la WebApp en un cluster de kubernetes'
       }
     }
   }
