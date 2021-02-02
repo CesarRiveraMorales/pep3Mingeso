@@ -9,6 +9,7 @@ pipeline {
     stage('Install packages') {
       steps {
         sh 'npm install'
+        sh 'npm install -g http-server'
       }
     }
 
@@ -27,6 +28,7 @@ pipeline {
     stage('Build/Deploy'){
       steps {
         sh 'npm run build'
+        sh 'npm run http-server ./dist -p 3454'
       }
     }
   }
