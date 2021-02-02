@@ -8,14 +8,19 @@ pipeline {
   stages {
     stage('Install packages') {
       steps {
-        sh 'npm -g install'
-        sh 'npm install -g @vue/cli'
+        sh 'npm install'
       }
     }
 
     stage('Test') {
       steps {
         sh 'npm run test -- --coverage --watchAll=false'
+      }
+    }
+
+    stage('Linter') {
+      steps {
+        sh 'npm run lint'
       }
     }
 
