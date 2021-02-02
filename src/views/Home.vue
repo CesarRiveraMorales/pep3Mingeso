@@ -16,7 +16,7 @@
 
       <v-divider></v-divider>
 
-      <v-card-text> Página de prueba para procedimiento de integración continua usando pipelines de Jenkins jeje</v-card-text>
+      <v-card-text>Esto debería ocurrir de forma automatica en un cluster</v-card-text>
 
     </v-card>
 </v-app>
