@@ -28,7 +28,9 @@ pipeline {
     stage('Build/Deploy'){
       steps {
         sh 'npm run build'
-        sh 'npm run http-server ./dist -p 3454'
+        sh 'npm run serve'
+        input message: '¿Ha terminado de usar la página? (Click en "Proceed" para continuar)'
+        sh 'kill -a'
       }
     }
   }
